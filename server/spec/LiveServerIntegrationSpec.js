@@ -60,6 +60,7 @@ describe('server', function() {
       request('http://127.0.0.1:3000/classes/messages', function(error, response, body) {
         var messages = JSON.parse(body).results;
         expect(messages[0].username).to.equal('Jono');
+        //testMessages.results[0] === "{"username":"Jono","message":"Do my bidding!"}"
         expect(messages[0].message).to.equal('Do my bidding!');
         done();
       });
